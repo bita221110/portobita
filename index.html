@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bita's Portfolio</title>
+
+    
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #fdf6e3; 
+            display: flex;
+            justify-content: center;
+        }
+
+        .container-welcome {
+            position: relative; 
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .welcome-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            z-index: 1;
+        }
+
+        
+        .btn-about {
+            position: absolute;
+            bottom: 10%; 
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            padding: 12px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffc6ce; 
+            text-decoration: none; 
+            background:#ef6d6d;
+            border-radius: 30px;
+            cursor: pointer;
+            z-index: 10;
+            transition: 0.3s;
+        }
+
+        .btn-about:hover {
+            color: #ffffff; 
+            transform: translateX(-50%) scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-welcome">
+        <img src="welcome.jpg" alt="welcome" class="welcome-image">
+
+        <a href="bita.html" class="btn-about"> about me</a>
+    </div>
+
+</body>
+</html>
