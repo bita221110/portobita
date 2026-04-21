@@ -6,87 +6,109 @@
 }
 
 body {
-    background: #FDF6E6;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Warna background lembut */
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-/* Judul */
-.title {
-    text-align: center;
-    margin-top: 90px;
+    padding: 20px;
 }
 
 .title h1 {
-    color: #E66;
-    font-size: 40px;
+    font-size: 1.5rem;
+    color: #555;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
 .title h2 {
-    font-size: 150px;
-    color: #7A3E2D;
+    font-size: 5rem; /* Ukuran nama diperbesar */
+    margin: 10px 0;
 }
+
+.title h2 span {
+    color: #a34963; /* Warna pink gelap sesuai gambar kamu */
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
 .title h3 {
-    font-size: 40px;
-    color:rgb(98, 16, 16);
-}
-.title span {
-    color: #D65A7C;
-}
-
-/* Vector Items */
-.item {
-    position: absolute;
-    cursor: pointer;
-    transition: transform 0.3s;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
-.item:hover {
-    transform: scale(1.1);
-}
-
-.cherry {
-    top: 40px;
-    left: 60px;
-}
-
-.ikan {
-    top: 5px;
-    right: 10px;
-}
-
-.es {
-    left: 5px;
-    bottom:5px;
-    nav-up: 20px;
-}
-
-.matcha {
-    right: 100px;
-    bottom: 200px;
-}
-
-/* Tombol About */
+/* Styling Tombol */
 .about-btn {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 14px 40px;
-    background: #F5A5B8;
-    color: white;
+    display: inline-block;
     text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
+    background-color: #e2b4bd; /* Warna pink pastel */
+    color: white;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-weight: 400;
+    transition: all 0.3s ease; /* Transisi halus */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.my portofolio.html:hover {
-    background: #E88AA1;
+/* Efek saat tombol disentuh kursor */
+.about-btn:hover {
+    background-color: #a34963;
+    transform: translateY(-5px); /* Tombol sedikit naik */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Animasi muncul (Fade In) */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.music-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Ganti 'right' jadi 'left' jika ingin di kiri */
+    text-align: center;
+    z-index: 100;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Membuat gambar bulat */
+    border: 4px solid #a34963;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(163, 73, 99, 0.5);
+}
+
+/* Animasi berputar saat lagu jalan */
+.playing {
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+#music-status {
+    font-size: 10px;
+    margin-top: 5px;
+    color: #a34963;
+    font-weight: bold;
 }
