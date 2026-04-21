@@ -82,8 +82,8 @@ body {
 }
 
 .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%; /* Membuat gambar bulat */
     border: 4px solid #a34963;
     cursor: pointer;
