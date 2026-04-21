@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #FDF6E6;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Judul */
+.title {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.title h1 {
+    color: #E66;
+    font-size: 40px;
+}
+
+.title h2 {
+    font-size: 150px;
+    color: #7A3E2D;
+}
+.title h3 {
+    font-size: 40px;
+    color:rgb(98, 16, 16);
+}
+.title span {
+    color: #D65A7C;
+}
+
+/* Vector Items */
+.item {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.1);
+}
+
+.cherry {
+    top: 40px;
+    left: 60px;
+}
+
+.ikan {
+    top: 5px;
+    right: 10px;
+}
+
+.es {
+    left: 5px;
+    bottom:5px;
+    nav-up: 20px;
+}
+
+.matcha {
+    right: 100px;
+    bottom: 200px;
+}
+
+/* Tombol About */
+.about-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 14px 40px;
+    background: #F5A5B8;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.my portofolio.html:hover {
+    background: #E88AA1;
+}
