@@ -48,24 +48,6 @@
     });
 document.getElementById('load-about').addEventListener('click', function(e) {
     
-    const targetUrl = this.href;
-
-    fetch(targetUrl)
-        .then(response => response.text())
-        .then(html => {
-            // Ambil bagian konten saja dari halaman bita.html
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            const newContent = doc.getElementById('content-area').innerHTML;
-            
-            // Ganti isi konten di halaman saat ini
-            document.getElementById('content-area').innerHTML = newContent;
-            
-            // Update URL di browser agar terlihat seperti pindah halaman
-            window.history.pushState({}, '', targetUrl);
-        })
-        .catch(err => console.warn('Gagal memuat halaman:', err));
-});
     </script>
 
 </body>
