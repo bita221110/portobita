@@ -41,6 +41,18 @@
             width: 100px;
             cursor: pointer;
         }
+        /* 🎧 Popup */
+.music-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e27373;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
     </style>
 </head>
 <body>
@@ -53,6 +65,30 @@
             <img src="logoig.jpg" alt="Instagram">
         </a>
     </div>
+    <!-- 🎧 POPUP -->
+    <div class="music-popup" id="popup">
+        <p>Welcooomee to my page😊</p>
+        <button onclick="playMusic()"> Music🎧 </button>
+        <button onclick="closePopup()">No music </button>
+    </div>
+
+    <!-- 🎵 AUDIO -->
+    <audio id="bg-music" loop>
+        <source src="wakingtuget.mp3" type="audio/mpeg">
+    </audio>
+    </div>
+    
+     <script>
+        function playMusic() {
+            var music = document.getElementById("bg-music");
+            music.play();
+            document.getElementById("popup").style.display = "none";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
