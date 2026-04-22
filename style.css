@@ -105,10 +105,3 @@ body {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
-
-#music-status {
-    font-size: 10px;
-    margin-top: 5px;
-    color: #a34963;
-    font-weight: bold;
-}
